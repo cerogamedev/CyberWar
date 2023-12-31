@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BatteryStation
   - HealthStation
+  - Bullet
   layers:
   - Default
   - TransparentFX

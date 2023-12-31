@@ -11,7 +11,7 @@ public class SteveMovement : MonoBehaviour
 
     public float startingX, startingY;
 
-
+    public bool isGo = true;
     void Start()
     {
         StartCoroutine(RastgeleHareketEt());
@@ -21,10 +21,10 @@ public class SteveMovement : MonoBehaviour
 
     IEnumerator RastgeleHareketEt()
     {
-        while (true)
+        while (isGo)
         {
             Vector2 hedefNokta = GetRastgeleNokta();
-            while ((Vector2)transform.position != hedefNokta)
+            while ((Vector2)transform.position != hedefNokta && isGo)
             {
                 transform.position = Vector2.MoveTowards(transform.position, hedefNokta, hareketHizi * Time.deltaTime);
                 yield return null;
